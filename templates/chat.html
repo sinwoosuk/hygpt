@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HY GPT</title>
+    <link rel="stylesheet" href="static/css/chat.css">
+    <link rel="stylesheet" href="static/css/responsive.css">
+    <link rel="shortcut icon" href="static/images/favicon.ico">    
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet">
+</head>
+<body>
+    <div class="mobile-content">  
+        <div class="chat-app">
+            <header class="chat-header">
+                <div class="header-content">
+                    <span class="history">
+                        <img src="static/images/history.png" alt="history" />
+                    </span>
+                    <div class="chat-title">
+                        <a href="/">
+                            <img src="static/images/logo.png" alt="LOGO" />
+                        </a>
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="chat-messages">
+                <div class="spinner" id="spinner"></div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="메시지를 입력하세요..." spellcheck="false">
+                <button class="chat-input-send-button">입력</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="history-panel">
+        <div class="history-header">
+            <h2>채팅 히스토리</h2>
+            <button class="close-history-panel">&times;</button>
+        </div>
+        <div class="history-content"></div>
+    </div>
+
+    <script src="static/js/chat.js"></script>
+</body>
+</html>

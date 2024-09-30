@@ -1,0 +1,258 @@
+/* CSS Document */
+
+body {
+    margin: 0;
+    font-family: 'Pretendard Variable', sans-serif;
+    background: #ffffff;
+}
+
+.chat-app {
+    max-width: 100%;
+    margin: auto;
+    background: white;
+}
+
+.chat-header {
+    background: #326eef;
+    padding: 3px;
+    text-align: center;
+}
+
+.chat-header .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.chat-title img {
+    height: 50px;
+    width: auto;
+}
+
+.history {
+    position: absolute;
+    left: 10px;
+}
+
+.history img {
+    width: 25px;
+    height: auto;
+}
+
+.back {
+    position: absolute;
+    right: 15px;
+}
+
+.back img {
+    width: 25px;
+    height: auto;
+}
+
+.history, .back {
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background: #326eef;
+    color: white;
+    font-size: 12px;
+}
+
+.chat-title {
+    background: #326eef;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    .chat-title img {
+        height: 60px;
+    }
+}
+
+.chat-messages {
+    padding: 20px;
+    height: 500px;
+    padding-bottom: 70px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    text-align: center;
+    color: #888;
+    margin: 10px 0;
+}
+
+.message {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 70%;
+}
+
+.message.received {
+    background: #f7f8fc;
+    align-self: flex-start;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+.message.send {
+    background: #326eef;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.message .name {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #326eef;
+}
+
+.message .time_received {
+    font-size: 12px;
+    margin-top: 7px;
+    color: #888;
+}
+
+.message .time_send {
+    font-size: 12px;
+    margin-top: 7px;
+    color: #fff;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 10px;
+    background: #f0f0f0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chat-input input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #efefef;
+    margin-right: 8px;
+    min-width: 0;
+}
+
+.chat-input-send-button {
+    width: 20%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #326eef;
+    color: white;
+    cursor: pointer;
+}
+
+.history-panel {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+    z-index: 2000;
+    border-top-right-radius: 50px; /* 오른쪽 상단 모서리 둥글게 */
+    border-bottom-right-radius: 50px; /* 오른쪽 하단 모서리 둥글게 */
+}
+
+.history-panel.open {
+    left: 0;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #326eef;
+    color: white;
+}
+
+.history-content {
+    padding: 10px;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.history-item:hover {
+    background-color: #f0f0f0;
+}
+
+.history-item .delete-button {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.history-item .delete-button:hover {
+    color: #e74c3c;
+}
+
+.close-history-panel {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.spinner {
+    display: none;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #326eef;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    left: 43%;
+    top: 50%; 
+    z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.consultation-banner {
+    display: flex;
+    justify-content: center; /* 내용을 가운데 정렬합니다. */
+    align-items: center; /* 세로 방향으로도 중앙에 배치합니다. */
+    padding: 30px; /* 배너의 상하 패딩, 필요에 따라 조정 */
+    background-color: #FFFFFF; /* 배너의 배경색, 필요에 따라 조정 */
+    color: #3e62dc; /* 텍스트 색상 */
+    font-size: 24px; /* 텍스트 크기, 필요에 따라 조정 */
+    width: 100%; /* 배너의 너비를 화면 너비와 맞춥니다. */
+    box-sizing: border-box; /* 패딩을 너비에 포함시킵니다. */
+	border-bottom: solid #326eef;
+    z-index: 10; /* 높은 계층 설정 */
+}
+
+.consultation-banner a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 링크 색상을 상위 요소에서 상속받습니다. */
+}
