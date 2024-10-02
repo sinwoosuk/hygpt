@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
-from jnugpt import handle_query
+from hygpt import handle_query
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
